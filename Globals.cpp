@@ -46,8 +46,9 @@ void init_system() {
     // this is because I actually divide it by 4
     // so it's equivalent to ~43px, but if you remove the division by 4
     // and leave only 43px, the font won't be as smooth.
+	SDL_Color color = {255, 255, 255, 255};
     texture_g[SCORE] = create_texture(render_g, "0",
-        SDL_Color(255, 255, 255, 255), "Assets/Score_font.ttf", 175);
+        color, "Assets/Score_font.ttf", 175);
 
     // the creation of all snake textures, mind you:
     // SNAKE_HEAD

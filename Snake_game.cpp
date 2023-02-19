@@ -76,8 +76,9 @@ void Game::add_score(int score) {
 
     // after updating the number of points, a new number should be displayed
     // so we create a new texture
+	SDL_Color color = {255, 255, 255, 255};
     SDL_Texture *tex = create_texture(::get_renderer(), std::to_string(get_score()).c_str(),
-        SDL_Color(255, 255, 255, 255), "Assets/Score_font.ttf", 175);
+        color, "Assets/Score_font.ttf", 175);
 
     SDL_Point size;
     SDL_QueryTexture(tex, nullptr, nullptr, &size.x, &size.y);
